@@ -22,14 +22,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAw-SW-JI4">
-                                <rect key="frame" x="20" y="101.5" width="374" height="179"/>
+                                <rect key="frame" x="20" y="101.5" width="374" height="180"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="179" id="YTn-AZ-s7w"/>
+                                    <constraint firstAttribute="height" constant="180" id="YTn-AZ-s7w"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="asn-Z8-crp">
-                                <rect key="frame" x="20" y="288.5" width="374" height="94"/>
+                                <rect key="frame" x="20" y="301.5" width="374" height="94"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="yNB-K5-6jb">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="94"/>
@@ -60,7 +60,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRr-M7-2jg">
                                         <rect key="frame" x="80" y="0.0" width="50" height="94"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5lo-1M-Wq6">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5lo-1M-Wq6">
                                                 <rect key="frame" x="12.5" y="3" width="25" height="88"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-uP-AZ3">
@@ -86,9 +86,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.21568627450980393" green="0.58823529411764708" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="5lo-1M-Wq6" firstAttribute="centerY" secondItem="jRr-M7-2jg" secondAttribute="centerY" id="JHc-m6-Qiq"/>
+                                            <constraint firstItem="5lo-1M-Wq6" firstAttribute="centerY" secondItem="jRr-M7-2jg" secondAttribute="centerY" id="JnM-X3-MrR"/>
+                                            <constraint firstItem="5lo-1M-Wq6" firstAttribute="centerX" secondItem="jRr-M7-2jg" secondAttribute="centerX" id="V3o-sM-2XH"/>
                                             <constraint firstAttribute="width" constant="50" id="eTT-fZ-BxY"/>
-                                            <constraint firstItem="5lo-1M-Wq6" firstAttribute="centerX" secondItem="jRr-M7-2jg" secondAttribute="centerX" id="gMg-jo-jAJ"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-1p-L4i">
@@ -121,7 +121,7 @@
                             <constraint firstItem="fAw-SW-JI4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GZH-GU-GP5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAw-SW-JI4" secondAttribute="trailing" constant="20" id="aBm-76-oxK"/>
                             <constraint firstItem="acP-20-INf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fQF-yu-fIN"/>
-                            <constraint firstItem="JCc-1p-L4i" firstAttribute="firstBaseline" secondItem="fAw-SW-JI4" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="hf1-iT-8ob"/>
+                            <constraint firstItem="JCc-1p-L4i" firstAttribute="firstBaseline" secondItem="fAw-SW-JI4" secondAttribute="baseline" constant="20" id="hf1-iT-8ob"/>
                             <constraint firstItem="fAw-SW-JI4" firstAttribute="firstBaseline" secondItem="acP-20-INf" secondAttribute="baseline" constant="15.5" symbolType="layoutAnchor" id="kG5-8y-VJZ"/>
                             <constraint firstItem="asn-Z8-crp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="maF-my-2qr"/>
                             <constraint firstItem="acP-20-INf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uWG-UG-ku0"/>
