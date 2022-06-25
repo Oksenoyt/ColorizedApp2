@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,22 +62,22 @@
                                         <rect key="frame" x="80" y="0.0" width="50" height="94"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5lo-1M-Wq6">
-                                                <rect key="frame" x="12.5" y="3" width="25" height="88"/>
+                                                <rect key="frame" x="11" y="3" width="28" height="88"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-uP-AZ3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-uP-AZ3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-92-MsL">
-                                                        <rect key="frame" x="0.0" y="32" width="25" height="24"/>
+                                                        <rect key="frame" x="1.5" y="32" width="25" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqq-fi-V4A">
-                                                        <rect key="frame" x="0.0" y="64" width="25" height="24"/>
+                                                        <rect key="frame" x="1.5" y="64" width="25" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -94,17 +95,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-1p-L4i">
                                         <rect key="frame" x="147" y="0.0" width="227" height="94"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-l6-lSN">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-l6-lSN">
                                                 <rect key="frame" x="-2" y="0.0" width="231" height="31"/>
-                                                <color key="tintColor" red="0.019607843137254902" green="0.2196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <color key="minimumTrackTintColor" red="0.019607843140000001" green="0.21960784310000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.21568627450980393" green="0.58823529411764708" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="k0U-mt-3yp"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lOX-eo-WU5">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lOX-eo-WU5">
                                                 <rect key="frame" x="-2" y="32" width="231" height="31"/>
                                                 <color key="tintColor" red="0.019607843137254902" green="0.2196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="minimumTrackTintColor" red="0.019607843140000001" green="0.21960784310000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.2156862745" green="0.58823529409999997" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Et2-wh-Fhh"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OJ8-Q9-ukz">
+                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OJ8-Q9-ukz">
                                                 <rect key="frame" x="-2" y="64" width="231" height="31"/>
                                                 <color key="tintColor" red="0.019607843137254902" green="0.2196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="minimumTrackTintColor" red="0.019607843140000001" green="0.21960784310000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.2156862745" green="0.58823529409999997" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.92941176470588238" green="0.96078431372549022" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="zr6-L4-ZZD"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -127,10 +146,24 @@
                             <constraint firstItem="acP-20-INf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uWG-UG-ku0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="OJ8-Q9-ukz" id="NSk-Zr-fqM"/>
+                        <outlet property="colorView" destination="fAw-SW-JI4" id="Jpt-HW-7VC"/>
+                        <outlet property="greenSlider" destination="lOX-eo-WU5" id="Qbq-yq-OD1"/>
+                        <outlet property="redSlider" destination="Ioi-l6-lSN" id="MLz-4r-rl8"/>
+                        <outlet property="valueBlueLabel" destination="Kqq-fi-V4A" id="4o3-Fn-EJh"/>
+                        <outlet property="valueGreenLabel" destination="gZ5-92-MsL" id="pn6-ff-amh"/>
+                        <outlet property="valueRedLabel" destination="8Wb-uP-AZ3" id="Ntm-IL-V7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
