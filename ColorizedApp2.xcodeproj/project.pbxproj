@@ -13,7 +13,6 @@
 		420E18112865A52700BBC7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420E180F2865A52700BBC7B8 /* Main.storyboard */; };
 		420E18132865A52B00BBC7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420E18122865A52B00BBC7B8 /* Assets.xcassets */; };
 		420E18162865A52B00BBC7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420E18142865A52B00BBC7B8 /* LaunchScreen.storyboard */; };
-		420E181E286603E600BBC7B8 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420E181D286603E600BBC7B8 /* Storyboard2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		420E18122865A52B00BBC7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420E18152865A52B00BBC7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		420E18172865A52B00BBC7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		420E181D286603E600BBC7B8 /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				420E18122865A52B00BBC7B8 /* Assets.xcassets */,
 				420E18142865A52B00BBC7B8 /* LaunchScreen.storyboard */,
 				420E18172865A52B00BBC7B8 /* Info.plist */,
-				420E181D286603E600BBC7B8 /* Storyboard2.storyboard */,
 			);
 			path = ColorizedApp2;
 			sourceTree = "<group>";
@@ -128,7 +125,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				420E181E286603E600BBC7B8 /* Storyboard2.storyboard in Resources */,
 				420E18162865A52B00BBC7B8 /* LaunchScreen.storyboard in Resources */,
 				420E18132865A52B00BBC7B8 /* Assets.xcassets in Resources */,
 				420E18112865A52700BBC7B8 /* Main.storyboard in Resources */,
