@@ -13,29 +13,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var valueRedLabel: UILabel!
     @IBOutlet weak var valueGreenLabel: UILabel!
     @IBOutlet weak var valueBlueLabel: UILabel!
+    
     @IBOutlet weak var colorView: UIView!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        valueRedLabel.text = String(redSlider.value)
-        valueGreenLabel.text = String(greenSlider.value)
-        valueBlueLabel.text = String(blueSlider.value)
+        colorView.layer.cornerRadius = 10
     }
     
     // MARK -IB Actoins
     @IBAction func sliderChanged(_ sender: UISlider) {
+        let color = CGColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+        
         switch sender.tag {
         case 1:
-            valueRedLabel.text = String(format: "%.1f", redSlider.value)
+            valueRedLabel.text = String(format: "%.2f", redSlider.value)
+            colorView.backgroundColor = UIColor(cgColor: color)
         case 2:
-            valueGreenLabel.text = String(format: "%.1f", greenSlider.value)
+            valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
+            colorView.backgroundColor = UIColor(cgColor: color)
         default:
-            valueBlueLabel.text = String(format: "%.1f", blueSlider.value)
+            valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
+            colorView.backgroundColor = UIColor(cgColor: color)
         }
     }
-    
-
 }
+
