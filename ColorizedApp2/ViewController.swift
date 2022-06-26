@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     // MARK -IB Actoins
     @IBAction func sliderChanged(_ sender: UISlider) {
-        let color = CGColor(
+        let color = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
@@ -37,13 +37,13 @@ class ViewController: UIViewController {
         switch sender.tag {
         case 1:
             valueRedLabel.text = String(format: "%.2f", redSlider.value)
-            colorView.backgroundColor = UIColor(cgColor: color)
+            colorView.backgroundColor = color
         case 2:
             valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
-            colorView.backgroundColor = UIColor(cgColor: color)
+            colorView.backgroundColor = color
         default:
             valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
-            colorView.backgroundColor = UIColor(cgColor: color)
+            colorView.backgroundColor = color
         }
     }
 }
