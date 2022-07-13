@@ -23,29 +23,12 @@ class SettingsViewController: UIViewController {
     var color: UIColor!
     
     var delegate: MainViewControllerDelegate!
-    var currentColorRGB: [String: CGFloat] = ["red":0.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
-        getRGB()
-        redSlider.value = Float(currentColorRGB["red"] ?? 0)
-        greenSlider.value = Float(currentColorRGB["green"] ?? 0)
-        blueSlider.value = Float(currentColorRGB["blue"] ?? 0)
-        colorView.backgroundColor = color
+        setSettings()
     }
-    
-    func getRGB() {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-        
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        currentColorRGB = ["red":red, "green":green, "blue":blue, "alpha":alpha]
-        return
-    }
-    
     
     // MARK -IB Actoins
     @IBAction func sliderChanged(_ sender: UISlider) {
@@ -73,5 +56,38 @@ class SettingsViewController: UIViewController {
         delegate.setNewValues(newColor: color)
         dismiss(animated: true)
     }
+    
+    // MARK - Private method
+    private func getRGB() -> [String: CGFloat] {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        return ["red":red, "green":green, "blue":blue]
+    }
+    
+    private func setSettings() {
+        let currentColorRGB: [String: CGFloat]
+        currentColorRGB = getRGB()
+        
+        for (key, value) in currentColorRGB{
+            switch key {
+            case "red":
+                redSlider.value = Float(value)
+                valueRedLabel.text = String(format: "%.2f", value)
+            case "green":
+                greenSlider.value = Float(value)
+                valueGreenLabel.text = String(format: "%.2f", value)
+            default:
+                blueSlider.value = Float(value)
+                valueBlueLabel.text = String(format: "%.2f", value)
+            }
+        }
+        colorView.backgroundColor = color
+    }
 }
+
 
