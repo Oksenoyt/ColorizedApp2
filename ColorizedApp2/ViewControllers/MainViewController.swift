@@ -13,25 +13,10 @@ protocol MainViewControllerDelegate {
 
 class MainViewController: UIViewController {
     
-    var currentColorRGB: [String: CGFloat] = ["red":0.0]
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
-        getRGBq()
         settingsVC.color = view.backgroundColor
         settingsVC.delegate = self
-        settingsVC.currentColorRGB = currentColorRGB
-    }
-    
-    func getRGBq() {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-        
-        view.backgroundColor?.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        currentColorRGB = ["red":red, "green":green, "blue":blue, "alpha":alpha]
-        return
     }
     
 }

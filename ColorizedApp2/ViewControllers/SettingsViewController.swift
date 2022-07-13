@@ -21,17 +21,29 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     
     var color: UIColor!
-    var currentColorRGB: [String: CGFloat]!
     
     var delegate: MainViewControllerDelegate!
+    var currentColorRGB: [String: CGFloat] = ["red":0.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
+        getRGB()
         redSlider.value = Float(currentColorRGB["red"] ?? 0)
         greenSlider.value = Float(currentColorRGB["green"] ?? 0)
         blueSlider.value = Float(currentColorRGB["blue"] ?? 0)
         colorView.backgroundColor = color
+    }
+    
+    func getRGB() {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        currentColorRGB = ["red":red, "green":green, "blue":blue, "alpha":alpha]
+        return
     }
     
     
