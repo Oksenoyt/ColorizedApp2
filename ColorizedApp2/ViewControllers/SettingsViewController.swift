@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     // MARK -  IB Outlets
     @IBOutlet weak var valueRedLabel: UILabel!
@@ -20,14 +20,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    var color: UIColor!
+    var currentColorRGB: [String: CGFloat]!
+    
+    var delegate: MainViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
+        redSlider.value = Float(currentColorRGB["red"] ?? 0)
+        greenSlider.value = Float(currentColorRGB["green"] ?? 0)
+        blueSlider.value = Float(currentColorRGB["blue"] ?? 0)
+        colorView.backgroundColor = color
     }
+    
     
     // MARK -IB Actoins
     @IBAction func sliderChanged(_ sender: UISlider) {
-        let color = UIColor(
+        color = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
@@ -45,6 +55,11 @@ class ViewController: UIViewController {
             valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
             colorView.backgroundColor = color
         }
+    }
+    
+    @IBAction func closeSettings() {
+        delegate.setNewValues(newColor: color)
+        dismiss(animated: true)
     }
 }
 
