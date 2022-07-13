@@ -20,10 +20,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    // MARK -  Public Properties
     var color: UIColor!
-    
     var delegate: MainViewControllerDelegate!
     
+    // MARK -  Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 10
@@ -57,7 +58,7 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    // MARK - Private method
+    // MARK - Private methods
     private func getRGB() -> [String: CGFloat] {
         var red: CGFloat = 0
         var green: CGFloat = 0
