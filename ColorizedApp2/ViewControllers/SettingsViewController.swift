@@ -41,6 +41,11 @@ class SettingsViewController: UIViewController {
         setSettingsFromMainScreen()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     // MARK -IB Actoins
     @IBAction func sliderChanged(_ sender: UISlider) {
         getColorFromSliders()
