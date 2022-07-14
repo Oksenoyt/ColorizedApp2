@@ -99,15 +99,15 @@ class SettingsViewController: UIViewController {
         for (key, value) in currentColor{
             switch key {
             case "red":
-                redSlider.value = value
+                redSlider.setValue(value, animated: true)
                 valueRedLabel.text = String(format: "%.2f", value)
                 redTextField.text = String(format: "%.2f", value)
             case "green":
-                greenSlider.value = value
+                greenSlider.setValue(value, animated: true)
                 valueGreenLabel.text = String(format: "%.2f", value)
                 greenTextField.text = String(format: "%.2f", value)
             default:
-                blueSlider.value = value
+                blueSlider.setValue(value, animated: true)
                 valueBlueLabel.text = String(format: "%.2f", value)
                 blueTextField.text = String(format: "%.2f", value)
             }
@@ -122,7 +122,7 @@ extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
         guard let value = Float(newValue) else {
-            showAlert(title: "Значение не задано 🙁", message: "Укажите значение от 0 до 1")
+            showAlert(title: "Не верное значение 🙁", message: "Укажите значение от 0 до 1")
             return
         }
         switch textField.tag {
