@@ -96,7 +96,6 @@ class SettingsViewController: UIViewController {
     }
     
     private func setNewSettings() {
-        
         for (key, value) in currentColor{
             switch key {
             case "red":
@@ -123,7 +122,7 @@ extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
         guard let value = Float(newValue) else {
-            showAlert(title: "Значение не задано", message: "Укажите значение от 0 до 1")
+            showAlert(title: "Значение не задано 🙁", message: "Укажите значение от 0 до 1")
             return
         }
         switch textField.tag {
@@ -140,8 +139,8 @@ extension SettingsViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            view.endEditing(true)
-        }
+        view.endEditing(true)
+    }
 }
 
 //MARK: - UIAlertController
