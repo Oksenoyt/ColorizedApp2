@@ -117,7 +117,10 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
-        guard let value = Float(newValue) else { return }
+        guard let value = Float(newValue) else {
+            showAlert(title: "Значение не задано", message: "Укажите значение от 0 до 1")
+            return
+        }
         switch textField.tag {
         case 1:
             currentColor["red"] = value
@@ -129,6 +132,16 @@ extension SettingsViewController: UITextFieldDelegate {
             currentColor["blue"] = value
             setNewSettings()
         }
+    }
+}
+
+//MARK: - UIAlertController
+extension SettingsViewController {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
